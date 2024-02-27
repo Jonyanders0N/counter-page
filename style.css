@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+    text-align: center;
+}
+
+.container h1 {
+    color: rgb(7, 7, 7);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.button-container {
+    margin-top: 50px;
+}
+
+button {
+    background-color: white;
+    font-size: 24px;
+    padding: 7px;
+    background: transparent;
+}
+
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+
+span {
+    font-size: 64px;
+}
+
+main {
+    min-height: calc(100vh - 3rem);
+    display: grid;
+    place-items: center;
+}
