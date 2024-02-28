@@ -1,16 +1,17 @@
-const btnDecrease = document.querySelector('.decrease');
-const btnIncrease = document.querySelector('.increase');
-const btnReset = document.querySelector('.reset');
-const counter = document.getElementById('value');
+const btns = document.querySelectorAll('.btn');
+const value = document.getElementById('value');
+let counter = 0;
 
-btnDecrease.addEventListener('click', () => {
-    counter.textContent -= 1;
-});
-
-btnIncrease.addEventListener('click', () => {
-    counter.textContent = Number(counter.textContent) + 1;
-})
-
-btnReset.addEventListener('click', () => {
-    counter.textContent = 0;
+btns.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+        const styles = e.currentTarget.classList;
+        if(styles.contains('decrease')){
+            counter--;
+        } else if(styles.contains('increase')){
+            counter++;
+        } else {
+            counter = 0;
+        }
+        value.textContent = counter;
+    })
 })
